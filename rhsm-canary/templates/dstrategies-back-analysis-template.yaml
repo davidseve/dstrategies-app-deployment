@@ -14,6 +14,6 @@ spec:
     failureLimit: 2
     provider:
       prometheus:
-        address: https://internal:<PROMETHEUS-PASSWORD>@prometheus.istio-system.svc.cluster.local:9090
+        address: https://internal:OBS%2FiQvy17euezyVoPNdyxJedihlazT2ShwrtaRfLNkgbJAK3mXmdBtvNxmePcEzxethGwLbWlaubDapZ%2F3XH5pqN0Qrrkn8xjhoQsMYoF2HYdhX1brZ6XiTtZC3Jq36i9R4ohdEq%2F5GS8WI61jju0rqnRXSr%2FOYbnyK1OZzZ7bJSxdBDq0WFjBqLsRZ4n8Tg9N%2FGT3PIspIcJ7GyS%2Flz3KUZGZnR3pD%2BYYafhFzIiB9avTyEX6tKcwvXgi%2BNaohxFLXxbuX9xmiJNGOKk%2F2rXi1Kv0m1HZIAuMf9sa8dd1YKGHdDPEIyooda9vxDcq9kP5za2IgoEK0fooor7IP@prometheus.istio-system.svc.cluster.local:9090
         query: |
                     sum(irate( istio_requests_total{reporter="source",destination_service_name=~"dstrategies-back",response_code!~"5.*"}[30s] )) / sum(irate( istio_requests_total{reporter="source",destination_service_name=~"dstrategies-back"}[30s] ))
