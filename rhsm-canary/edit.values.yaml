@@ -1,4 +1,4 @@
 service:
   image:
-    version: V1.0.0
+    version: V2.0.0
 domain: ocp.sandbox2081.opentlc.com
